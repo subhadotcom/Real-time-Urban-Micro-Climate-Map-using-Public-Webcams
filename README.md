@@ -115,8 +115,3 @@ The computer vision analysis parameters can be adjusted in `backend/app/cv_analy
 
 - **Sun/Shadow Detection**: Brightness thresholds (default: 60% for sun, 40% for shadow)
 - **Wetness Detection**: Saturation, edge density, and specular highlight weights
-
-## License
-
-MIT
-
