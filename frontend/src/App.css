@@ -1,0 +1,92 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.app-header {
+  padding: 1rem;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+  text-align: center;
+  color: white;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.map-container {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.popup-content {
+  color: #333;
+}
+
+.status-connected {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.status-disconnected {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.stats {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.stats p {
+  margin: 0.2rem 0;
+}
+
+.legend {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  z-index: 1000;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.legend h4 {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.dot.sun {
+  background: #ffeb3b;
+}
+
+.dot.shadow {
+  background: #333;
+}
+
+.dot.wet {
+  background: #2196f3;
+}

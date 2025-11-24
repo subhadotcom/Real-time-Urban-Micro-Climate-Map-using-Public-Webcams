@@ -1,32 +1,18 @@
-version: '3.8'
+
 
 services:
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: microclimate-backend
+    build: ./backend
     ports:
       - "8000:8000"
-    environment:
-      - API_HOST=0.0.0.0
-      - API_PORT=8000
-      - FETCH_INTERVAL_SECONDS=60
     volumes:
-      - ./backend/app:/app/app
-    restart: unless-stopped
+      - ./backend:/app
+    environment:
+      - PYTHONUNBUFFERED=1
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    container_name: microclimate-frontend
+    build: ./frontend
     ports:
       - "3000:80"
-    environment:
-      - REACT_APP_API_URL=http://localhost:8000
-      - REACT_APP_WS_HOST=localhost
-      - REACT_APP_WS_PORT=8000
     depends_on:
       - backend
-    restart: unless-stopped
